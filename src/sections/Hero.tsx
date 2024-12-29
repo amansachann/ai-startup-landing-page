@@ -39,7 +39,7 @@ const Hero = () => {
           <h1 className="text-8xl font-semibold tracking-tighter bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] bg-white text-transparent bg-clip-text text-center md:text-[168px] md:leading-none">
             AI SEO
           </h1>
-          <p className="text-lg md:text-xl text-white/70 mt-5 text-center mx-w-xl mx-auto">
+          <p className="text-lg md:text-xl text-white/70 mt-5 text-center mx-w-xl md:w-[32rem] mx-auto">
             Elevate your site's visibility effortlessly with AI, where smart
             technology meets user-friendly SEO tools.
           </p>
