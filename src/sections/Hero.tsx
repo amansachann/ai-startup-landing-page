@@ -4,7 +4,6 @@ import React, { useRef } from "react";
 import starsBg from "@/assets/stars.png";
 import {
   motion,
-  useMotionValueEvent,
   useScroll,
   useTransform,
 } from "framer-motion";
@@ -112,8 +111,8 @@ const Hero = () => {
             AI SEO
           </h1>
           <p className="text-lg md:text-xl text-white/70 mt-5 text-center mx-w-xl md:w-[32rem] mx-auto">
-            Elevate your site's visibility effortlessly with AI, where smart
-            technology meets user-friendly SEO tools.
+            Elevate your site&apos;s visibility effortlessly with AI, where
+            smart technology meets user-friendly SEO tools.
           </p>
           <div className="flex justify-center mt-5">
             <Button>Join waitlist</Button>

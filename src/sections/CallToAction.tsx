@@ -11,31 +11,48 @@ import {
   useMotionValue,
 } from "framer-motion";
 
-const useRelativeMousePositon = (to: RefObject<HTMLElement>) => {
+const useRelativeMousePositon = (to: RefObject<HTMLDivElement | null>) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const updateMousePosition = (event: MouseEvent) => {
-    if (!to.current) return;
-    const { top, left } = to.current?.getBoundingClientRect();
-    mouseX.set(event.x - left);
-    mouseY.set(event.y - top);
-  };
-
   useEffect(() => {
+    const updateMousePosition = (event: MouseEvent) => {
+      if (!to.current) return;
+      const { top, left } = to.current?.getBoundingClientRect();
+      mouseX.set(event.x - left);
+      mouseY.set(event.y - top);
+    };
     window.addEventListener("mousemove", updateMousePosition);
 
     return () => {
       window.addEventListener("mousemove", updateMousePosition);
     };
-  }, []);
+  }, [mouseX, mouseY, to]);
+
+  // useEffect(() => {
+  //   window.addEventListener("mousemove", (event: MouseEvent) => {
+  //     if (!to.current) return;
+  //     const { top, left } = to.current?.getBoundingClientRect();
+  //     mouseX.set(event.x - left);
+  //     mouseY.set(event.y - top);
+  //   });
+
+  //   return () => {
+  //     window.addEventListener("mousemove", (event: MouseEvent) => {
+  //       if (!to.current) return;
+  //       const { top, left } = to.current?.getBoundingClientRect();
+  //       mouseX.set(event.x - left);
+  //       mouseY.set(event.y - top);
+  //     });
+  //   };
+  // }, [to, mouseX, mouseY]);
 
   return [mouseX, mouseY];
 };
 
 const CallToAction = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const borderDivRef = useRef<HTMLDivElement>(null);
+  const borderDivRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -47,7 +64,9 @@ const CallToAction = () => {
     [-300, 300]
   );
 
-  const [mouseX, mouseY] = useRelativeMousePositon(borderDivRef);
+  const [mouseX, mouseY] = useRelativeMousePositon(
+    borderDivRef as React.RefObject<HTMLDivElement>
+  );
 
   const maskImage = useMotionTemplate`radial-gradient(50% 50% at ${mouseX}px ${mouseY}px,black,transparent)`;
 

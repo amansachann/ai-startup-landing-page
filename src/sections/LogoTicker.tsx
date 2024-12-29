@@ -6,6 +6,7 @@ import quantumLogo from "@/assets/logo-quantum.png";
 import pulseLogo from "@/assets/logo-pulse.png";
 import echoLogo from "@/assets/logo-echo.png";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const LogoTicker = () => {
   return (
@@ -41,10 +42,13 @@ const LogoTicker = () => {
                   apexLogo,
                   quantumLogo,
                 ].map((logo, index) => (
-                  <img
+                  <Image
                     src={logo.src}
                     key={`${logo.src}-${index}`}
                     className="h-6 w-auto"
+                    width={200}
+                    height={200}
+                    alt={logo.src}
                   />
                 ))}
               </motion.div>

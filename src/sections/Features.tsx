@@ -79,7 +79,7 @@ const FeatureTab = (
     };
     animate(xPercentage, [0, 100, 100, 0, 0], animateOptions);
     animate(yPercentage, [0, 0, 100, 100, 0], animateOptions);
-  }, [props.selected]);
+  }, [props.selected, xPercentage, yPercentage]);
 
   const handleTabHover = () => {
     if (dotLottieRef.current === null) return;
@@ -133,7 +133,7 @@ const Features = () => {
   const handleSelectedTab = (index: number) => {
     setSelectedTab(index);
 
-    const animateOptions:ValueAnimationTransition = {
+    const animateOptions: ValueAnimationTransition = {
       duration: 2,
       ease: "easeInOut",
     };
