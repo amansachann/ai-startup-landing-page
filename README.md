@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 **AI Startup Landing Page**  
 
-## Getting Started
+A modern, responsive landing page template designed specifically for AI startups. Built with **Next.js** and **Tailwind CSS**, this template is optimized for performance, scalability, and easy deployment on **Vercel**.
 
-First, run the development server:
+## 📸 **Preview**  
+[Live Demo](https://ai-startup-landing-page-lac.vercel.app/)
 
+---
+
+## 📚 **Features**  
+
+✅ **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.  
+✅ **SEO Optimized:** Pre-configured for better search engine visibility.  
+✅ **Performance-Focused:** Blazing-fast load times with Next.js optimization.  
+✅ **Easy to Customize:** Tailwind CSS for rapid UI customization.  
+✅ **Deployment Ready:** Pre-configured for deployment on Vercel.  
+
+---
+
+## 🛠️ **Technologies Used**  
+
+- **Next.js** – React framework for server-side rendering.  
+- **Tailwind CSS** – Utility-first CSS framework for modern designs.  
+- **Vercel** – Deployment and hosting platform.  
+
+---
+
+## 🚀 **Getting Started**  
+
+### **1. Clone the Repository**  
+```bash
+git clone https://github.com/yourusername/ai-startup-landing-page.git
+cd ai-startup-landing-page
+```
+
+### **2. Install Dependencies**  
+```bash
+npm install
+# or
+yarn install
+```
+
+### **3. Run the Development Server**  
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see your application in action.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **4. Build and Deploy**  
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy on **Vercel**:  
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 **Project Structure**  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/public       → Static assets  
+/pages        → Next.js pages  
+/components   → Reusable UI components  
+/styles       → Tailwind CSS configurations  
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 **Customization Guide**  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Update **metadata** in `/pages/_app.js`.  
+2. Modify UI components in `/components`.  
+3. Update branding assets in `/public`.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤝 **Contributing**  
+
+Contributions are welcome! Feel free to open issues or submit pull requests.  
+
+1. Fork the repository.  
+2. Create a new branch: `git checkout -b feature/your-feature`  
+3. Commit your changes: `git commit -m "Add some feature"`  
+4. Push to the branch: `git push origin feature/your-feature`  
+5. Submit a pull request.  
+
+---
+
+## 📜 **License**  
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📬 **Contact**  
+
+For any queries or support, feel free to reach out:  
+📧 **codewithaman78@gmail.com**  
+
+---
+
+Let me know if you'd like any further customization or additions! 😊
