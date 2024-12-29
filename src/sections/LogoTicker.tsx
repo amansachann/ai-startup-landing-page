@@ -40,8 +40,12 @@ const LogoTicker = () => {
                   celestialLogo,
                   apexLogo,
                   quantumLogo,
-                ].map((logo) => (
-                  <img src={logo.src} key={logo.src} className="h-6 w-auto" />
+                ].map((logo, index) => (
+                  <img
+                    src={logo.src}
+                    key={`${logo.src}-${index}`}
+                    className="h-6 w-auto"
+                  />
                 ))}
               </motion.div>
             </div>
